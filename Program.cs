@@ -1,7 +1,9 @@
 using System;
 using System.Text;
+using AuthenticationApi.Services;
 using ElectronicsShop.Data;
 using ElectronicsShop.Entities;
+using ElectronicsShop.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -43,7 +45,7 @@ builder.Services.AddAuthentication(options =>
     });
 
 
-builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<ILoginRegister, LoginRegister>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

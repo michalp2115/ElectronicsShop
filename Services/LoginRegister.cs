@@ -9,12 +9,12 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace AuthenticationApi.Services;
 
-public class AuthenticationService : IAuthenticationService
+public class LoginRegister : ILoginRegister
 {
     private readonly UserManager<User> _userManager;
     private readonly IConfiguration _configuration;
 
-    public AuthenticationService(UserManager<User> userManager, IConfiguration configuration)
+    public LoginRegister(UserManager<User> userManager, IConfiguration configuration)
     {
         _userManager = userManager;
         _configuration = configuration;

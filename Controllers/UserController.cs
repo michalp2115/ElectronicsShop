@@ -11,9 +11,9 @@ namespace ElectronicsShop.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IAuthenticationService _authenticationService;
+        private readonly ILoginRegister _authenticationService;
 
-        public UserController(IAuthenticationService authenticationService)
+        public UserController(ILoginRegister authenticationService)
         {
             _authenticationService = authenticationService;
         }

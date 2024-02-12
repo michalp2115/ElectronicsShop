@@ -72,7 +72,7 @@ namespace ElectronicsShop.Controllers
 
             return CreatedAtRoute("GetItem", new { id = item.Id }, item);
         }
-
+        //DELETE ITEM BY ID
         [HttpDelete]
         public IActionResult DeleteItem(int id)
         {
@@ -89,7 +89,7 @@ namespace ElectronicsShop.Controllers
             _context.SaveChanges();
             return Ok();
         }
-
+        //EDIT ITEM BY ID
         [HttpPut("id", Name = "EditItem")]
         public IActionResult EditItem(int id, [FromBody] Item item)
         {
